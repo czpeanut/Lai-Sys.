@@ -290,5 +290,74 @@
   </head>
   <body>
     <div id="root"></div>
+
+    <!--
+      Internal-only brand switcher for this restored/mirrored deployment.
+      This site is hosted on a domain the app's tenant-detection logic
+      doesn't recognize (it keys brand/tenant off the production hostname),
+      so it otherwise silently falls back to the "rulin" default brand and
+      invite codes from other academies fail to verify. This widget just
+      sets/clears the same "?brand=" query param the app already reads
+      (see getBrandIdFromLocation), so anyone reviewing the site can pick
+      the correct tenant without memorizing the URL parameter by hand.
+      Not part of the original product UI.
+    -->
+    <div
+      id="internal-brand-switcher"
+      style="position:fixed;bottom:10px;right:10px;z-index:2147483647;font:12px/1.4 -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#1c1917;color:#fff;border-radius:10px;padding:8px 10px;box-shadow:0 4px 16px rgba(0,0,0,.3);display:flex;align-items:center;gap:6px;opacity:.9;"
+    >
+      <label for="internal-brand-switcher-select" style="white-space:nowrap;">內部切換分校</label>
+      <select
+        id="internal-brand-switcher-select"
+        style="font:inherit;padding:3px 6px;border-radius:6px;border:1px solid #57534e;background:#292524;color:#fff;max-width:46vw;"
+      ></select>
+    </div>
+    <script>
+      (function () {
+        try {
+          var BRANDS = [
+            { id: '', label: '（系統預設／不指定）' },
+            { id: 'rulin', label: '儒林補習班' },
+            { id: 'jianru', label: '建儒補習班' },
+            { id: 'fengshen', label: '蜂神榜解題系統' },
+            { id: 'yuda', label: '育達高職統測 Ai 名師班' },
+            { id: 'goldenmedal', label: '金牌補習班' },
+            { id: 'leader', label: '高手補習班' },
+            { id: 'iamstudy', label: '愛學館個別指導' },
+            { id: 'feifanedu', label: '非凡教育' },
+            { id: 'cornerstone', label: '學築文理' },
+            { id: 'citadel', label: '學城文理' },
+            { id: 'wmch1969', label: '文城教育' },
+            { id: 'wsedu', label: '文勝張毅教育' },
+            { id: 'kaochiao', label: '高橋教育' },
+            { id: 'dreamclass', label: '築科高職解題系統' },
+            { id: 'fangyi', label: '芳毅高職學習解題站' },
+            { id: 'liveabc', label: 'LiveABC' },
+            { id: 'intlTwLanguageSchool', label: 'TW 語言學校' },
+            { id: 'intlJpKawai', label: '日本．Kawai' },
+            { id: 'intlKr', label: '韓國' },
+            { id: 'intlUsTflTrinity', label: '美國．TFL Trinity' },
+          ];
+          var params = new URLSearchParams(window.location.search);
+          var current = params.get('brand') || '';
+          var select = document.getElementById('internal-brand-switcher-select');
+          BRANDS.forEach(function (b) {
+            var opt = document.createElement('option');
+            opt.value = b.id;
+            opt.textContent = b.label;
+            if (b.id === current) opt.selected = true;
+            select.appendChild(opt);
+          });
+          select.addEventListener('change', function () {
+            var url = new URL(window.location.href);
+            if (select.value) url.searchParams.set('brand', select.value);
+            else url.searchParams.delete('brand');
+            window.location.href = url.toString();
+          });
+        } catch (e) {
+          /* Non-essential dev tool; never block the real app. */
+        }
+      })();
+    </script>
   </body>
 </html>

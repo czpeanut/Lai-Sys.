@@ -1,0 +1,1 @@
+var e={TW:[`物理`,`化學`,`數學`,`生物`,`英文`,`國文`,`歷史`,`地理`],JP:[`国語`,`数学`,`理科`,`社会`,`英語`],KR:[`국어`,`수학`,`과학`,`사회`,`영어`],US:[`English`,`Math`,`Science`,`Social Studies`],default:[`物理`,`化學`,`數學`,`生物`,`英文`,`國文`,`歷史`,`地理`]};function t(t){return t?e[t]??e.default:e.TW}var n={TW:`zh-TW`,JP:`ja-JP`,KR:`ko-KR`,US:`en-US`};export{t as n,n as t};

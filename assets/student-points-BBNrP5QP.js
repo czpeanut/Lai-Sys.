@@ -1,0 +1,1 @@
+function e(e){if(!e)return 0;let t=Number.isFinite(e.balance)?Math.max(0,e.balance):0,n=Number.isFinite(e.reservedBalancePoints)?Math.max(0,e.reservedBalancePoints??0):0;return Math.max(0,t-n)}export{e as t};

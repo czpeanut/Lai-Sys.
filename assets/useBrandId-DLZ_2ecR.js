@@ -1,0 +1,1 @@
+import{Bt as e}from"./index-DSBwn2dO.js";function t(){return e().brandId}function n(){return e().warmBrandId}function r(){return e().effectiveBrand}export{r as n,n as r,t};

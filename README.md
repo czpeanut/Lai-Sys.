@@ -15,6 +15,28 @@ deployment on `ai-teachers-fengshen.web.app` (Firebase project
   the remaining static files referenced by `index.html`.
 - `firebase.json` / `.firebaserc` — Hosting config reconstructed from the
   live site's response headers, for redeploying with `firebase deploy`.
+- `.github/workflows/deploy-pages.yml` — deploys this repo to GitHub Pages
+  on every push to `main`.
+
+## Deploying to GitHub Pages
+
+Pushing to `main` runs the included workflow, which publishes the repo to
+`https://<owner>.github.io/Lai-Sys./`. One manual step is required once per
+repo: in **Settings → Pages**, set **Source** to **GitHub Actions**.
+
+Because GitHub Pages project sites are served under a `/Lai-Sys./` subpath
+rather than domain root, all root-absolute asset references in `index.html`
+and the module-preload/CSS loader inside `assets/preload-helper-*.js` were
+rewritten to include that prefix (the original build had it hardcoded to
+`/`, matching its original Firebase Hosting root). If this project is ever
+served from a different path (a custom domain, a different repo name, or
+Firebase Hosting again), search for `/Lai-Sys./` in `index.html` and
+`assets/preload-helper-*.js` and adjust it to match.
+
+One cosmetic side effect of the subpath: the client unconditionally polls
+`/version.json` (absolute, unprefixed) for "new version available" checks.
+Under the `/Lai-Sys./` subpath that request 404s, which only disables that
+update-banner check — it does not affect anything else.
 
 ## Running locally
 

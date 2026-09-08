@@ -1,0 +1,1 @@
+function e(e){return e===`image/png`||e===`image/jpeg`||e===`image/webp`}function t(t){if(!t||typeof t!=`object`)return!1;let n=t;return e(n.mimeType)&&typeof n.data==`string`&&n.data.length>=16&&n.data.length<=25e5&&/^[A-Za-z0-9+/=]+$/.test(n.data)}function n(e){return`data:${e.mimeType};base64,${e.data}`}export{t as n,n as r,e as t};

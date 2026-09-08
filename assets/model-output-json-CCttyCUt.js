@@ -1,0 +1,1 @@
+function e(e){let t=String(e??``).trim(),n=t.match(/```(?:json)?\s*([\s\S]*?)```/);n&&(t=n[1].trim());let r=t.indexOf(`{`),i=t.lastIndexOf(`}`);if(r===-1||i===-1||i<=r)throw Error(`No JSON object found in model output:\n${String(e).slice(0,200)}`);let a=t.slice(r,i+1);return JSON.parse(a)}export{e as t};

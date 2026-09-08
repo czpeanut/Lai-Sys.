@@ -1,0 +1,1 @@
+var e=12e4,t=3e5;function n(e){return typeof e==`number`&&Math.abs(e)>=12e4}function r(e){return typeof e==`number`&&Math.abs(e)>=3e5}function i(e){if(!n(e))return``;let t=e,r=Math.round(Math.abs(t)/6e4),i=t<0?`快`:`慢`;if(r>=60){let e=Math.floor(r/60),t=r%60;return`${i}約 ${e} 小時${t?` ${t} 分鐘`:``}`}return`${i}約 ${Math.max(1,r)} 分鐘`}export{n as a,r as i,e as n,i as r,t};

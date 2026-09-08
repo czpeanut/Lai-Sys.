@@ -1,0 +1,1 @@
+function e(){let e=globalThis.crypto;if(!e?.getRandomValues)return null;let t=new Uint8Array(16);return e.getRandomValues(t),Array.from(t).map(e=>e.toString(16).padStart(2,`0`)).join(``)}export{e as t};

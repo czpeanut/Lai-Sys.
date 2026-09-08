@@ -1,0 +1,1 @@
+import{r as e}from"./storage-keys-DKYdw1Gt.js";function t(){return localStorage.getItem(e.DEVICE_ID)||``}export{t};

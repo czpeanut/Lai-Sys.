@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+    <!-- 🟢 V4.7 Cache Busting -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <!-- 🔒 Security Fix: Removed 'unsafe-eval' (enables XSS via eval/Function constructor) -->
+    <!-- 🔒 Security Fix: Removed https://cdn.tailwindcss.com from script-src (third-party script execution) -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'unsafe-inline' https://apis.google.com https://www.google.com https://www.gstatic.com https://www.recaptcha.net; script-src-elem 'self' 'unsafe-inline' https://apis.google.com https://www.google.com https://www.gstatic.com https://www.recaptcha.net; worker-src 'self' blob:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob: https://www.gstatic.com https://www.google.com https://*.googleusercontent.com https://firebasestorage.googleapis.com https://*.firebasestorage.app https://storage.googleapis.com; connect-src 'self' blob: https://fonts.googleapis.com https://fonts.gstatic.com https://*.googleapis.com https://*.firebaseio.com https://*.firebaseapp.com https://firestore.googleapis.com https://generativelanguage.googleapis.com wss://generativelanguage.googleapis.com https://www.google.com https://www.gstatic.com https://www.recaptcha.net https://*.cloudfunctions.net https://94aiteacher.com https://*.94aiteacher.com; frame-src 'self' https://*.firebaseapp.com https://accounts.google.com https://apis.google.com https://www.google.com https://www.recaptcha.net;"
+    />
+
+    <title>蜂神榜解題系統｜22 大學科 Ai 解題、圖解與作文批改</title>
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#0F766E" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon-180.png" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="蜂神榜" />
+    <meta name="description" content="蜂神榜學員專屬 Ai 解題中心。22 大學科完整覆蓋國高中數理化語文社會科，精準圖解讓抽象題目視覺化，打破砂鍋追問深挖每個步驟，作文批改依會考/學測標準分軌評分。" />
+    <meta name="keywords" content="蜂神榜,Ai 解題,國中會考,高中學測,22 學科,圖解教學,打破砂鍋,作文批改,英文作文,高中物理,高中化學,高中數學" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="zh_TW" />
+    <meta property="og:title" content="蜂神榜解題系統｜22 大學科 Ai 解題、圖解與作文批改" />
+    <meta property="og:description" content="蜂神榜學員專屬 Ai 解題中心。22 大學科完整覆蓋國高中數理化語文社會科，精準圖解讓抽象題目視覺化，打破砂鍋追問深挖每個步驟，作文批改依會考/學測標準分軌評分。" />
+    <meta property="og:site_name" content="蜂神榜解題系統" />
+    <meta property="og:url" content="https://94aiteacher.com/" />
+    <link rel="canonical" href="https://94aiteacher.com/" />
+    <meta property="og:image" content="https://94aiteacher.com/og/fengshen.png?v=20260515-ogfix" />
+    <meta property="og:image:secure_url" content="https://94aiteacher.com/og/fengshen.png?v=20260515-ogfix" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="蜂神榜解題系統｜22 大學科 Ai 解題、圖解與作文批改" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://94aiteacher.com/og/fengshen.png?v=20260515-ogfix" />
+    <meta name="twitter:title" content="蜂神榜解題系統｜22 大學科 Ai 解題、圖解與作文批改" />
+    <meta name="twitter:description" content="蜂神榜學員專屬 Ai 解題中心。22 大學科完整覆蓋國高中數理化語文社會科，精準圖解讓抽象題目視覺化，打破砂鍋追問深挖每個步驟，作文批改依會考/學測標準分軌評分。" />
+    <!-- Default favicon. Per-brand builds inject the complete PWA manifest and icon links, then replace this SVG favicon with brand PNG icons. -->
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Keep the primary CJK body family render-blocking; defer the decorative serif family. -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"
+      rel="preload"
+      as="style"
+      crossorigin="anonymous"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"
+        rel="stylesheet"
+        crossorigin="anonymous"
+      />
+    </noscript>
+
+    <!-- Theme bootstrap: apply the correct theme attribute before React loads to avoid FOUC. -->
+    <script>
+      (function () {
+        try {
+          var url = new URL(window.location.href);
+          var t = url.searchParams.get('theme');
+          var w = url.searchParams.get('warm');
+          var ls = localStorage.getItem('theme_preference_v2');
+          var legacy = localStorage.getItem('warm_design_override');
+          var pin = url.searchParams.get('pin') === '1';
+          var valid = ['warm', 'warm-dark', 'warm-night', 'auto'];
+          var theme = null;
+          // URL theme has priority.
+          if (t === 'legacy') {
+            theme = 'warm';
+            if (pin) localStorage.setItem('theme_preference_v2', 'warm');
+          } else if (t && valid.indexOf(t) >= 0) {
+            theme = t;
+            if (pin) localStorage.setItem('theme_preference_v2', t);
+          } else if (w === '1') {
+            // Session-only unless pin=1 writes to localStorage.
+            theme = 'warm';
+            if (pin) localStorage.setItem('theme_preference_v2', 'warm');
+          } else if (w === '0') {
+            theme = 'warm';
+            if (pin) {
+              localStorage.setItem('theme_preference_v2', 'warm');
+              localStorage.removeItem('warm_design_override');
+            }
+          } else if (w === 'auto') {
+            localStorage.removeItem('theme_preference_v2');
+            localStorage.removeItem('warm_design_override');
+          }
+          // LS
+          if (!theme && ls === 'legacy') {
+            theme = 'warm';
+            localStorage.setItem('theme_preference_v2', 'warm');
+          }
+          if (!theme && ls && valid.indexOf(ls) >= 0) theme = ls;
+          if (!theme && (legacy === '1' || legacy === '0')) {
+            theme = 'warm';
+            localStorage.setItem('theme_preference_v2', 'warm');
+            localStorage.removeItem('warm_design_override');
+          }
+          if (!theme) theme = 'warm';
+          // resolve auto
+          var isOperationalWorkspace =
+            url.searchParams.has('tenant-portal') ||
+            url.searchParams.has('admin-login') ||
+            url.searchParams.has('admin-scope') ||
+            url.searchParams.has('warm-admin-preview') ||
+            window.location.hash.indexOf('/warm/admin') >= 0;
+          var effective = theme;
+          if (theme === 'auto') {
+            effective = isOperationalWorkspace
+              ? 'warm'
+              : window.matchMedia('(prefers-color-scheme: dark)').matches
+                ? 'warm-dark'
+                : 'warm';
+          }
+          // Apply effective theme and data-warm to <html> before body exists to avoid the DOMContentLoaded gap.
+          document.documentElement.dataset.theme = effective;
+          if (effective === 'warm' || effective === 'warm-dark' || effective === 'warm-night') {
+            document.documentElement.dataset.warm = '1';
+          }
+          document.documentElement.style.colorScheme =
+            effective === 'warm-dark' || effective === 'warm-night' ? 'dark' : 'light';
+        } catch (e) {
+          /* Fall back to the default theme without blocking React. */
+        }
+      })();
+    </script>
+
+    <!-- Scrollbar Styles -->
+    <link rel="stylesheet" href="/scrollbar.css" />
+
+    <!-- CSS Variables and Motion Preferences -->
+    <style>
+      :root {
+        --color-primary: #8dd6c3;
+        --color-primary-dark: #5a9e8e;
+        --color-accent: #fbbf24;
+        --color-text-primary: #57534e;
+        --color-text-muted: #78716c;
+        --color-bg-primary: #fffdf5;
+        --radius-sm: 12px;
+        --radius-md: 20px;
+        --radius-lg: 32px;
+        --transition-fast: 150ms;
+        --transition-normal: 200ms;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index-DSBwn2dO.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime-aKtaBQYM.js">
+    <link rel="modulepreload" crossorigin href="/assets/preload-helper-zJ_50EbN.js">
+    <link rel="modulepreload" crossorigin href="/assets/country-i-osGknx.js">
+    <link rel="modulepreload" crossorigin href="/assets/brand-CdBOkJEr.js">
+    <link rel="modulepreload" crossorigin href="/assets/economy-6CveBHJv.js">
+    <link rel="modulepreload" crossorigin href="/assets/i18n-zh-TW-UvMshax-.js">
+    <link rel="modulepreload" crossorigin href="/assets/i18n-copy-DhgpW8c4.js">
+    <link rel="modulepreload" crossorigin href="/assets/international-subjects-BCNwdq__.js">
+    <link rel="modulepreload" crossorigin href="/assets/learning-site-scope-_IvAmkpk.js">
+    <link rel="modulepreload" crossorigin href="/assets/storage-keys-DKYdw1Gt.js">
+    <link rel="modulepreload" crossorigin href="/assets/subject-groups-BGqwLzkV.js">
+    <link rel="modulepreload" crossorigin href="/assets/subject-category-visibility-o8-ZYrS8.js">
+    <link rel="modulepreload" crossorigin href="/assets/subject-catalog-BVz0cnmn.js">
+    <link rel="modulepreload" crossorigin href="/assets/vendor-firebase-core-Ci4y5_1w.js">
+    <link rel="modulepreload" crossorigin href="/assets/vendor-firebase-functions-D4Jy2Jen.js">
+    <link rel="modulepreload" crossorigin href="/assets/vendor-react-BomN5VXn.js">
+    <link rel="modulepreload" crossorigin href="/assets/emulator-connection-Cr6YvMKo.js">
+    <link rel="modulepreload" crossorigin href="/assets/logger-BSvbj6SG.js">
+    <link rel="modulepreload" crossorigin href="/assets/callable-device-id-CrpUyufj.js">
+    <link rel="modulepreload" crossorigin href="/assets/format-BhhkxtiV.js">
+    <link rel="modulepreload" crossorigin href="/assets/image-processor-DgDlaUhS.js">
+    <link rel="modulepreload" crossorigin href="/assets/solve-eligibility-Bjr5Ej0G.js">
+    <link rel="modulepreload" crossorigin href="/assets/retry-DBmng2MD.js">
+    <link rel="modulepreload" crossorigin href="/assets/cloud-repository-BDtVKnVy.js">
+    <link rel="modulepreload" crossorigin href="/assets/feature-flags-yCpX-DER.js">
+    <link rel="modulepreload" crossorigin href="/assets/clock-skew-core-KYzHwyfX.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-Cwzhmx6A.css">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "蜂神榜解題系統支援哪些學科？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "涵蓋 22 大學科，包含數學、物理、化學、生物、地科、國文、英文、歷史、地理、公民等國高中主科，以及學測自然/社會、國高中作文批改與英文作文批改。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "蜂神榜怎麼開始使用？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "憑蜂神榜補習班分發的邀請碼在登入頁完成綁定，系統依年級自動開通對應科目，邀請碼由補習班老師或管理員分發。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "圖解和「打破砂鍋追問」是什麼功能？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "圖解讓 Ai 繪製知識結構圖、計算圖示或概念圖幫助理解；打破砂鍋追問讓你針對解題步驟持續追問，直到真正理解為止。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "蜂神榜支援高中學測和分科測驗嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "有。系統完整支援學測自然、學測社會、分科測驗物理、化學、生物、地科，以及高中數學與英文段考。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "學生帳號之間的資料會互通嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不會。每位學生憑獨立邀請碼建立帳號，解題紀錄與作文批改只有本人與授權老師能查看，帳號完全隔離。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "解題 Ai 名師會真的理解題目，還是只查資料庫？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ai 名師由大型語言模型驅動，能理解題目文字、圖片與表格，並依照學生年級、科目風格與考試類型生成針對性解釋，而非搜尋固定答案庫。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "蜂神榜解題系統",
+  "url": "https://94aiteacher.com/",
+  "logo": "https://94aiteacher.com/og/fengshen.png?v=20260515-ogfix",
+  "description": "蜂神榜學員專屬 Ai 解題中心。22 大學科完整覆蓋國高中數理化語文社會科，精準圖解讓抽象題目視覺化，打破砂鍋追問深挖每個步驟，作文批改依會考/學測標準分軌評分。"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "蜂神榜解題系統",
+  "url": "https://94aiteacher.com/",
+  "applicationCategory": "EducationApplication",
+  "operatingSystem": "Web",
+  "description": "蜂神榜學員專屬 Ai 解題中心。22 大學科完整覆蓋國高中數理化語文社會科，精準圖解讓抽象題目視覺化，打破砂鍋追問深挖每個步驟，作文批改依會考/學測標準分軌評分。",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "TWD",
+    "description": "邀請碼綁定後即可使用，點數由補習班統一管理"
+  }
+}
+</script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
